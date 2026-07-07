@@ -1,7 +1,7 @@
 from flask import Flask, jsonify, render_template, request, send_file,  after_this_request
 import os
 app = Flask(__name__)
-import os
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 UPLOAD_FOLDER = os.path.join(BASE_DIR, "uploads")
 

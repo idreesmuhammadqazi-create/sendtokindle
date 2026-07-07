@@ -1,11 +1,46 @@
 <!DOCTYPE html>
 <html>
-    <head></head>
+    <head>
+        <title>Send To Kindle</title>
+        <style>
+            body {
+                background-color: #db7171;
+
+            }
+            h1 {
+                color: #333;
+                text-align: center;
+            }
+            form {
+                max-width: 400px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: #db7140;
+                border-radius: 8px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            }
+            input {
+                color: aqua;
+                
+            }
+            .browsebutton {
+                background: cadetblue;
+                display: inline-block;
+                padding: 10px 20px;
+                color: white;
+                border-radius: 6px;
+                cursor: pointer;
+                font-weight: 600;
+            }
+        </style>
+    </head>
     <body>
-        <h1>Upload button</h1>
+        <h1>Send To Kindle</h1>
+
         <form action="/upload" method="post" enctype="multipart/form-data">
-            <input type="file" name="book">
-            <button type="submit">upload</button>
+            <label for="book" class="browsebutton">Choose File</label>
+            <input type="file" id="book" name="book" style="display:none">
+            <button type="submit" style="margin-left: 150px">Upload</button>
         </form>
 
     </body>
