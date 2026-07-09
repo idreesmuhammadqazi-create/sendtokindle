@@ -1,5 +1,3 @@
 #!/bin/sh
 
-echo "PATH=$PATH" > /mnt/us/check.log
-
-find / -name "python*" >> /mnt/us/check.log 2>&1
+/mnt/us/python3/bin/python3.9 /mnt/us/extensions/SendToKindle/receiver.py
