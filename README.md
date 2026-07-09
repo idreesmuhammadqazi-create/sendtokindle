@@ -20,10 +20,10 @@ for a quickstart do this
 ```
 1 JAILBREAK your kindle (Yes this is a must)
 2 get PYTHON 3 for kindle (will add links later)
-3 get KUAL this will be the luancher (wont work now later ill make it)
-4 run KUAL and select SEND TO KINDLE and then run it 
-5 close KUAL and go to ur computer
-6 run server.py
-7 open localhost:3000
-8 upload and it will get there in 1-2 mins
+3 get KUAL this will be the luancher
+4 run server.py
+5 open localhost:3000
+6 upload
+7 run KUAL and select SEND TO KINDLE and then run it 
+8 the book will appear
 ```

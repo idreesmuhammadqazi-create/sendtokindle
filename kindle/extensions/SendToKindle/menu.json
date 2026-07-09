@@ -1,0 +1,9 @@
+{
+    "items" : [
+        {
+            "name" : "Check for books",
+            "priority" : 1,
+            "action" : "./bin/check.sh"
+        }
+    ]
+}
