@@ -6,15 +6,23 @@ the next thing ill do is to make a mail server for this so you can have a email 
 after that ill add conversions and other stuff but mostly thats it 
 
 right now   the current repo structure is :
-```├── kindle
-│   ├── documents
-│   └── reciver.py
+```
+.
+├── kindle
+│   └── extensions
+│       └── SendToKindle
+│           ├── bin
+│           │   └── check.sh
+│           ├── config.xml
+│           ├── menu.json
+│           └── receiver.py
 ├── README.md
 └── server
     ├── server.py
     ├── templates
     │   └── index.html
     └── uploads
+
 ```
 for a quickstart do this 
 ```
