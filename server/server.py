@@ -1,5 +1,7 @@
 from flask import Flask, jsonify, render_template, request, send_file,  after_this_request
 import os
+import subprocess
+from pathlib import Path
 app = Flask(__name__)
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -14,6 +16,11 @@ def home():
 def upload():
     file=request.files["book"]
     file.save(os.path.join(UPLOAD_FOLDER, file.filename))
+    name = file.filename
+    ext = Path(name).suffix
+    if ext == ".epub" :
+        subprocess.run(["python3",os.path.join(BASE_DIR, "epub2mobi.py"), os.path.join(UPLOAD_FOLDER, name)])
+        os.remove(os.path.join(UPLOAD_FOLDER, name))
     return "SAVED"
 @app.route("/download/<filename>")
 def download(filename):

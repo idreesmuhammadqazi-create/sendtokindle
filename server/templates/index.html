@@ -37,9 +37,12 @@
     <body>
         <h1>Send To Kindle</h1>
 
+        <h6>Upload an epub or mobi file to send to your kindle (will be sent in mobi format)</h6>
+
         <form action="/upload" method="post" enctype="multipart/form-data">
             <label for="book" class="browsebutton">Choose File</label>
-            <input type="file" id="book" name="book" style="display:none">
+            <input type="file" id="book" name="book" style="display:none" accept=".mobi,.epub" onchange="document.getElementById('filename').textContent = this.files[0]?.name || ''">
+            <span id="filename"></span>
             <button type="submit" style="margin-left: 150px">Upload</button>
         </form>
 
