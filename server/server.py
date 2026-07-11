@@ -19,7 +19,7 @@ def upload():
     name = file.filename
     ext = Path(name).suffix
     if ext == ".epub" :
-        subprocess.run(["python3",os.path.join(BASE_DIR, "epub2mobi.py"), os.path.join(UPLOAD_FOLDER, name)])
+        subprocess.run([os.path.join(BASE_DIR, "kindlegen"),os.path.join(UPLOAD_FOLDER, name)])
         os.remove(os.path.join(UPLOAD_FOLDER, name))
     if ext == ".fb2" :
         subprocess.run(["zip" , os.path.join(UPLOAD_FOLDER, name+".zip"), os.path.join(UPLOAD_FOLDER, name)])
