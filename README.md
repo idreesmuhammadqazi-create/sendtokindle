@@ -44,4 +44,8 @@ for a quickstart do this
 links : https://www.mobileread.com/forums/showthread.php?t=225030
 download kindle jailbreak , python 3 for kindle ,Mobileread Kindlet Kit ,KUAL
 ```
-acknowledgements : this project now uses epub2mobi by hyle (MIT license)
+EDIT removed both of these  
+acknowledgements : this project now uses epub2mobi by hyle (MIT license)  
+this project also uses an ai generated fb2 to epub conversion script  
+  
+  new acknowledgements : amazon kindlegen
