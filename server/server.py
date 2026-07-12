@@ -4,7 +4,7 @@ import subprocess
 from pathlib import Path
 app = Flask(__name__)
 import random
-
+app.config["MAX_CONTENT_LENGTH"] = 50 * 1024 * 1024
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 UPLOAD_FOLDER = os.path.join(BASE_DIR, "uploads")
 

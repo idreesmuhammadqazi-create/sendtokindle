@@ -1,6 +1,6 @@
 import requests
 import subprocess
-pin = requests.get("http://192.168.100.28:3000/new").text
+pin = requests.get("http://idrees.hackclub.app/new").text
 with open("code.txt", "w") as t:
     t.write(pin)
 print("YOUR PIN IS ",pin )
