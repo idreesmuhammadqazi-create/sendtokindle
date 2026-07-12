@@ -33,7 +33,7 @@ def pair():
 def page(pin):
     pinfolder = os.path.join(UPLOAD_FOLDER,pin)
     if os.path.isdir(pinfolder):
-        return render_template("page.html")
+        return render_template("page.html", pin=pin)
     else:
         return "invalid code"
 @app.route("/<pin>/upload", methods=["POST"])
@@ -60,7 +60,7 @@ def download(pin, filename):
         os.remove(os.path.join(pinfolder, filename))
         return response
     return send_file(os.path.join(pinfolder, filename))
-@app.route("<pin>/list")
+@app.route("/<pin>/list")
 def list(pin):
     pinfolder = os.path.join(UPLOAD_FOLDER,pin)
     return jsonify(os.listdir(pinfolder))
