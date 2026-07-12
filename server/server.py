@@ -27,7 +27,7 @@ def pair():
     if os.path.isdir(pinfolder):
         return redirect("/" + pin)
     else:
-        return "invalid pin"
+        return "invalid pin", 418
 
 @app.route("/<pin>")
 def page(pin):
@@ -35,7 +35,7 @@ def page(pin):
     if os.path.isdir(pinfolder):
         return render_template("page.html", pin=pin)
     else:
-        return "invalid code"
+        return "invalid code", 418
 @app.route("/<pin>/upload", methods=["POST"])
 def upload(pin):
     file=request.files["book"]
@@ -65,4 +65,5 @@ def list(pin):
     pinfolder = os.path.join(UPLOAD_FOLDER,pin)
     return jsonify(os.listdir(pinfolder))
 
-app.run(host="0.0.0.0", port=3000)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=3000)
