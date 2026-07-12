@@ -1,5 +1,6 @@
 import os
 import requests
+import subprocess
 pin = ""
 BASE_DIR = "/mnt/us"
 documents = os.path.join(BASE_DIR, "documents")
@@ -8,8 +9,8 @@ with open("code.txt") as t:
     
 
 booklist = requests.get("https://idrees.hackclub.app/"+pin+"/list").json()
-print("got book list")
-print(booklist)
+subprocess.run(["eips", "15" , "10", "got book list"])
+subprocess.run(["eips", "15" , "12", str(booklist)])
 
 if booklist:
     filename = booklist[0]
@@ -17,6 +18,6 @@ if booklist:
 
     with open(os.path.join(documents, filename), "wb") as text:
         text.write(book)
-        print("done", filename)
+        subprocess.run(["eips", "15" , "13", f"got {filename}"])
 else:
-    print("no books")
+    subprocess.run(["eips", "15" , "13", "no books"])
