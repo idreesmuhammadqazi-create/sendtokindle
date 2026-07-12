@@ -2,8 +2,13 @@
     "items" : [
         {
             "name" : "Check for books",
-            "priority" : 1,
+            "priority" : 2,
             "action" : "./bin/check.sh"
+        },
+        {
+            "name" : "GENERATE PIN",
+            "priority" : 1,
+            "action" : "./bin/pin.sh"
         }
     ]
 }

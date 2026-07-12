@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Send To Kindle</title>
+        <title>SEND TO KINDLE</title>
         <style>
             body {
                 background-color: #db7171;
 
             }
             h1 {
+                color: #333;
+                text-align: center;
+            }
+            h5 {
                 color: #333;
                 text-align: center;
             }
@@ -23,28 +27,15 @@
                 color: aqua;
                 
             }
-            .browsebutton {
-                background: cadetblue;
-                display: inline-block;
-                padding: 10px 20px;
-                color: white;
-                border-radius: 6px;
-                cursor: pointer;
-                font-weight: 600;
-            }
+
         </style>
     </head>
     <body>
-        <h1>Send To Kindle</h1>
-
-        <h6 style="text-align: center">Upload an epub, fb2, or mobi file to send to your kindle (will be sent in mobi format)</h6>
-
-        <form action="/upload" method="post" enctype="multipart/form-data">
-            <label for="book" class="browsebutton">Choose File</label>
-            <input type="file" id="book" name="book" style="display:none" accept=".mobi,.epub,.fb2" onchange="document.getElementById('filename').textContent = this.files[0]?.name || ''">
-            <span id="filename"></span>
-            <button type="submit" style="margin-left: 150px">Upload</button>
+        <h1>SEND TO KINDLE <h1>
+        <h5>PAIR YOUR DEVICE FIRST</h5>
+        <form action-="/pair" method="post">
+            <input type="number" maxlength="4" name="pin">
+            <button type=""submit>Pair</button>
         </form>
-
     </body>
 </html>
